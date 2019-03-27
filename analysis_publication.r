@@ -136,7 +136,7 @@ bicols <- c("#214478","#A1D662")
 
 adn53 <- list()
 
-cairo_pdf("figures/class_dropout_control_spraytime.pdf",width=16,height=7)
+cairo_pdf("figures/class_dropout_control_spraytime.pdf",width=16,height=7,family="Arial")
 par(mfrow=c(1,2),cex=1.5,cex.lab=1,cex.sub=1.2)
 adn53$conspray <- plotPCA(cds53$conspray,soi=strains,perm=pm,cutoff=cf,rowLabs=sNames,subtitle="",cols=bicols,showArrows=F)
 adn53$contime <- plotPCA(cds53$contime,soi=strains,perm=pm,cutoff=cf,rowLabs=sNames,subtitle="",cols=bicols,showArrows=F)
@@ -188,13 +188,13 @@ mtext(bquote(underline("                                                        
 
 dev.off()
 
-cairo_pdf("figures/class_dropout_control_spraytime_bar.pdf",width=16,height=7)
+cairo_pdf("figures/class_dropout_control_spraytime_bar.pdf",width=16,height=7,family="Arial")
 par(mfrow=c(1,2),cex=1)
 plotCommunityChanges(cds53$contime,soi=strains,cutoff=cf,rowLabs=sNames,subtitle="",cols=bicols,nBars=18)
 plotCommunityChanges(cds53$conspray,soi=strains,cutoff=cf,rowLabs=sNames,subtitle="",cols=bicols,nBars=18)
 dev.off()
 
-cairo_pdf("figures/class_dropout_bar.pdf",width=28,height=21)
+cairo_pdf("figures/class_dropout_bar.pdf",width=28,height=21,family="Arial")
 par(mfrow=c(3,4),cex=1,oma=c(0,6,4,0))
 plotCommunityChanges(cds53$noalpha,soi=notalpha,cutoff=cf,rowLabs=naNames,subtitle="",cols=bicols,nBars=18)
 plotCommunityChanges(cds53$nobeta,soi=notbeta,cutoff=cf,rowLabs=nbNames,subtitle="",cols=bicols,nBars=18)
@@ -227,13 +227,13 @@ dev.off()
 
 adn6 <- list()
 
-cairo_pdf("figures/single_dropout_batch_pca.pdf",width=14,height=7)
+cairo_pdf("figures/single_dropout_batch_pca.pdf",width=14,height=7,family="Arial")
 par(mfrow=c(1,2),cex=1.5,cex.lab=1,cex.sub=1.2)
 adn6[["batch"]] <- plotPCA(cds6[["batch"]],soi=strains,perm=pm,cutoff=cf,rowLabs=sNames,cols=bicols,showArrows=F)
 adn6[["dropout"]] <- plotPCA(cds6[["dropout"]],soi=strains,perm=pm,cutoff=cf,rowLabs=sNames,cols=bicols,showArrows=F)
 dev.off()
 
-cairo_pdf("figures/single_dropout_pca.pdf",width=21,height=175)
+cairo_pdf("figures/single_dropout_pca.pdf",width=21,height=175,family="Arial")
 par(mfrow=c(25,3),cex=1.5,oma=c(0,8,6,0),cex.lab=1,cex.sub=1.2)
 for(x in levels(ds6c$meta$initial)[-1]){
     adn6[[paste(x,1,sep="")]] <- plotPCA(cds6[[paste(x,1,sep="")]],soi=strains[strains!=x],perm=pm,cutoff=cf,rowLabs=sNames[strains!=x],subtitle="",cols=bicols,showLegend=F,showArrows=F,showTitle=F)
@@ -249,20 +249,20 @@ mtext("Drop-Out Condition",side=2,line=5,at=0.5,outer=T,cex=4)
 mtext("Experiment",side=3,line=4,at=0.52,outer=T,cex=4)
 dev.off()
 
-cairo_pdf("figures/single_dropout_highlights_pca.pdf",width=28,height=7)
+cairo_pdf("figures/single_dropout_highlights_pca.pdf",width=28,height=7,family="Arial")
 par(mfrow=c(1,4),cex=1,cex.main=1.5,cex.sub=1.5)
 for(x in c("Leaf203","Leaf231","Leaf233","Leaf262")){
     adn6[[paste(x,"c",sep="")]] <- plotPCA(cds6[[paste(x,"c",sep="")]],soi=strains[strains!=x],perm=pm,cutoff=cf,rowLabs=sNames[strains!=x],cols=bicols,showLegend=F,showArrows=F,subtitle=leafTaxonomy[x,]$Name)
 }
 dev.off()
 
-cairo_pdf("figures/single_dropout_batch_bar.pdf",width=14,height=7)
+cairo_pdf("figures/single_dropout_batch_bar.pdf",width=14,height=7,family="Arial")
 par(mfrow=c(1,2),cex=1)
 plotCommunityChanges(cds6[["batch"]],soi=strains,cutoff=cf,rowLabs=sNames,cols=bicols,nBars=12)
 plotCommunityChanges(cds6[["dropout"]],soi=strains,cutoff=cf,rowLabs=sNames,cols=bicols,nBars=12)
 dev.off()
 
-cairo_pdf("figures/single_dropout_bar.pdf",width=42,height=175)
+cairo_pdf("figures/single_dropout_bar.pdf",width=42,height=175,family="Arial")
 par(mfrow=c(25,3),cex=1,oma=c(0,4,4,0))
 for(x in levels(ds6c$meta$initial)[-1]){
     plotCommunityChanges(cds6[[paste(x,1,sep="")]],soi=strains[strains!=sub("no","Leaf",x)],cutoff=cf,rowLabs=sNames[strains!=sub("no","Leaf",x)],subtitle="",cols=bicols,nBars=34)
@@ -287,7 +287,7 @@ p <- t(matrix(pvalues53[c(-1,-2)],4))
 rownames(e) <- c("Group Absent\nvs. Control (a)","Late Arrival\nvs. Mock (b)","Late Arrival\nvs. Control (c)","Late Arrival\nvs. Control (c)","Late Arrival\nvs. Control (c)")
 colnames(e) <- c("Alphaproteobacteria","Betaproteobacteria","Gammaproteobacteria","Proteobacteria")
 
-cairo_pdf("figures/class_dropout_summary.pdf",width=6,height=6)
+cairo_pdf("figures/class_dropout_summary.pdf",width=6,height=6,family="Arial")
 par(cex=1,xpd=T)
 corrplot(e,is.corr=F,cl.lim=c(0,0.7),cl.ratio=0.4,p.mat=p,insig="label_sig",sig=c(0.0001,0.001,0.01,0.05),tl.col=1,pch.cex=1,tl.srt=45,xlim=c(-6,5),mar=c(0,7,2,2),col=zcols)
 
@@ -329,7 +329,7 @@ mask[proteo,10:11] <- FALSE
 
 overlay <- matrix(cut(pv53,c(0,0.0001,0.001,0.01,0.05,1),c("****","***","**","*","")),nrow(pv53))
 
-cairo_pdf("figures/class_dropout_details.pdf",width=10,height=15)
+cairo_pdf("figures/class_dropout_details.pdf",width=10,height=15,family="Arial")
 par(cex=1)
 treatmap(tree,fc53,mask=mask,overlay=overlay,tip.labels=leafTaxonomy[tree$tip.label,]$Name,tip.colors=strainCols,aspect.ratio=0.2,tip.label.width=8,z.cols=zcols)
 dev.off()
@@ -350,7 +350,7 @@ shortNames <- shortNames[order(match(shortNames,tree$tip.label))]
 
 subtree <- keep.tip(tree,shortNames)
 
-cairo_pdf("figures/single_dropout_summary.pdf",width=14,height=7)
+cairo_pdf("figures/single_dropout_summary.pdf",width=14,height=7,family="Arial")
 par(cex=1,xpd=T)
 rownames(e) <- rep("",3)
 corrplot(e,is.corr=F,cl.lim=c(0,0.25),cl.ratio=0.1,tl.col=c(leafTaxonomy[shortNames,]$Color,"black"),p.mat=p,insig="label_sig",sig=c(0.0001,0.001,0.01,0.05),pch.cex=1,mar=c(0,8,0,2),col=zcols)
@@ -385,12 +385,12 @@ overlay <- matrix(cut(pv6c,c(0,0.0001,0.001,0.01,0.05,1),c("****","***","**","*"
 hc <- as.phylo(hclust(dist(fc6c)))
 hc <- reorderTips(hc)
 
-cairo_pdf("figures/single_dropout_details_phylo.pdf",width=15,height=20)
+cairo_pdf("figures/single_dropout_details_phylo.pdf",width=15,height=20,family="Arial")
 par(cex=1)
 treatmap(tree,fc6c,mask=mask,overlay=overlay,tip.labels=leafTaxonomy[tree$tip.label,]$Name,tip.colors=leafTaxonomy[tree$tip.label,]$Color,tip.label.width=10,mat.label.height=24,mat.labels=leafTaxonomy[colnames(fc6c),]$Name,mat.label.color=leafTaxonomy[colnames(fc6c),]$Color,mat.hclust=T,z.cols=zcols)
 dev.off()
 
-cairo_pdf("figures/single_dropout_details_hclust.pdf",width=15,height=20)
+cairo_pdf("figures/single_dropout_details_hclust.pdf",width=15,height=20,family="Arial")
 par(cex=1)
 treatmap(hc,fc6c,mask=mask,overlay=overlay,tip.labels=leafTaxonomy[hc$tip.label,]$Name,tip.colors=leafTaxonomy[hc$tip.label,]$Color,tip.label.width=10,mat.label.height=24,mat.labels=leafTaxonomy[colnames(fc6c),]$Name,mat.label.color=leafTaxonomy[colnames(fc6c),]$Color,mat.hclust=T,z.cols=zcols)
 dev.off()
@@ -431,7 +431,7 @@ for(i in 1:(length(shortNames))){
 
 overlay <- matrix(cut(pvc,c(0,0.0001,0.001,0.01,0.05,1),c("****","***","**","*","")),nrow(pvc))
 
-cairo_pdf("figures/single_dropout_separate_details_phylo.pdf",width=20,height=20)
+cairo_pdf("figures/single_dropout_separate_details_phylo.pdf",width=20,height=20,family="Arial")
 par(cex=1)
 treatmap(tree,fcc,mask=mask,overlay=overlay,tip.labels=leafTaxonomy[tree$tip.label,]$Name,tip.colors=leafTaxonomy[tree$tip.label,]$Color,tip.label.width=10,mat.label.height=24,mat.labels=colnames(fcc),mat.label.color=leafTaxonomy[shortNames,]$Color,mat.col.order=order(match(shortNames,tree$tip.label),decreasing=T),z.cols=zcols)
 dev.off()
@@ -446,12 +446,12 @@ control62 <- ds62$counts
 control62 <- control62[,ds62$meta$initial=="ALL"]
 control62 <- control62[rownames(control62)!="Unclassified",]
 
-cairo_pdf("figures/class_dropout_control_community.pdf",width=20,height=10)
+cairo_pdf("figures/class_dropout_control_community.pdf",width=20,height=10,family="Arial")
 par(cex=1)
 comm53 <- plotCommunity(control53,type="bar",xlabels=leafTaxonomy[rownames(control53),]$Name,xcols=leafTaxonomy[rownames(control53),]$Color)
 dev.off()
 
-cairo_pdf("figures/single_dropout_control_community.pdf",width=20,height=10)
+cairo_pdf("figures/single_dropout_control_community.pdf",width=20,height=10,family="Arial")
 par(cex=1)
 comm61 <- plotCommunity(control61,type="bar",xlabels=leafTaxonomy[rownames(control61),]$Name,xcols=leafTaxonomy[rownames(control61),]$Color)
 comm62 <- plotCommunity(control62,type="bar",xlabels=leafTaxonomy[rownames(control62),]$Name,xcols=leafTaxonomy[rownames(control61),]$Color)
@@ -463,7 +463,7 @@ cds5362 <- makeCDS(counts=cbind(control53,control62),meta=rbind(cds53$conspray$m
 cds6162 <- makeCDS(counts=cbind(control61,control62),meta=rbind(ds61$meta[ds62$meta$initial=="ALL",],ds62$meta[ds62$meta$initial=="ALL",]),foi="experiment",legend=c("Single Dropout R1","Single Dropout R2"))
 cdsControl <- makeCDS(counts=cbind(control53,control61,control62),meta=rbind(cds53$conspray$meta,ds61$meta[ds61$meta$initial=="ALL",],ds62$meta[ds62$meta$initial=="ALL",]),foi="experiment",legend=c("Class Droupout","Single Dropout R1","Single Dropout R2"))
 
-cairo_pdf("figures/controls_comparison_pca.pdf",width=14,height=14)
+cairo_pdf("figures/controls_comparison_pca.pdf",width=14,height=14,family="Arial")
 par(mfrow=c(2,2),cex=1)
 plotPCA(cds5361,cols=bicols)
 plotPCA(cds6162,cols=bicols)
@@ -481,12 +481,12 @@ for(name in names(sparTabs)){
 }
 
 # Pie chart of control community
-cairo_pdf("figures/class_dropout_pie.pdf",width=7,height=7)
+cairo_pdf("figures/class_dropout_pie.pdf",width=7,height=7,family="Arial")
 par(cex=1)
 plotCommunityPie(control53,strainTaxa=names(phylumColors)[match(leafTaxonomy[rownames(control53),]$Color,phylumColors)],cols=phylumColors,taxLabels=names(phylumColors),sort=F)
 dev.off()
 
-cairo_pdf("figures/single_dropout_pie.pdf",width=7,height=7)
+cairo_pdf("figures/single_dropout_pie.pdf",width=7,height=7,family="Arial")
 par(cex=1)
 plotCommunityPie(control61,strainTaxa=names(phylumColors)[match(leafTaxonomy[rownames(control61),]$Color,phylumColors)],cols=phylumColors,taxLabels=names(phylumColors),sort=F)
 plotCommunityPie(control62,strainTaxa=names(phylumColors)[match(leafTaxonomy[rownames(control62),]$Color,phylumColors)],cols=phylumColors,taxLabels=names(phylumColors),sort=F)
@@ -550,20 +550,20 @@ vst53 <- assay(varianceStabilizingTransformation(dds53))
 median53 <- apply(vst53,1,median)
 mediani <- apply(vsti,1,median)
 
-cairo_pdf("figures/class_dropout_winners_losers.pdf",width=40,height=10)
+cairo_pdf("figures/class_dropout_winners_losers.pdf",width=40,height=10,family="Arial")
 par(cex=1)
 icds53 <- makeCDS(ids53,include=list(time=c("t0","t2")),foi="time",legend=c("Inoculum","Established Community"))
 plotCommunityChanges(icds53,cutoff=cf,rowLabs=leafTaxonomy[rownames(ids53$counts),]$Name,subtitle="",cols=bicols,nBars=54)
 dev.off()
 
-cairo_pdf("figures/class_dropout_inocula.pdf",width=20,height=10)
+cairo_pdf("figures/class_dropout_inocula.pdf",width=20,height=10,family="Arial")
 par(cex=1)
 plotCommunity(ids53$counts[1:62,ids53$meta$spray=="Inoc"],xlabels=leafTaxonomy[rownames(ids53$counts)[1:62],"Name"],xcols=leafTaxonomy[rownames(ids53$counts)[1:62],"Color"],type="points")
 dev.off()
 
 write.table(ids53$counts[1:62,ids53$meta$spray=="Inoc"],"results/inocula53.txt")
 
-cairo_pdf("figures/single_dropout_inocula.pdf",width=20,height=10,onefile=T)
+cairo_pdf("figures/single_dropout_inocula.pdf",width=20,height=10,onefile=T,family="Arial")
 par(cex=1)
 plotCommunity(ids61$counts[1:62,ids61$meta$time=="t0"],xlabels=leafTaxonomy[rownames(ids61$counts)[1:62],"Name"],xcols=leafTaxonomy[rownames(ids61$counts)[1:62],"Color"],type="points")
 plotCommunity(ids62$counts[1:62,ids62$meta$time=="t0"],xlabels=leafTaxonomy[rownames(ids62$counts)[1:62],"Name"],xcols=leafTaxonomy[rownames(ids62$counts)[1:62],"Color"],type="points")
@@ -577,7 +577,7 @@ icds5362 <- makeCDS(ids5362,include=list(time=c("t0")),foi="experiment",title=""
 icds6162 <- makeCDS(ids6162,include=list(time=c("t0")),foi="experiment",title="",legend=c("Single Dropout R1 Inoculum","Single Dropout R2 Inoculum"))
 icds536162 <- makeCDS(ids536162,include=list(time=c("t0")),foi="experiment",title="",legend=c("Class Dropout Inoculum","Single Dropout R1 Inoculum","Single Dropout R2 Inoculum"))
 
-cairo_pdf("figures/inocula_comparison.pdf",width=14,height=14)
+cairo_pdf("figures/inocula_comparison.pdf",width=14,height=14,family="Arial")
 par(mfrow=c(2,2),cex=1)
 x <- plotPCA(icds5361,cols=bicols)
 x <- plotPCA(icds6162,cols=bicols)
@@ -618,7 +618,7 @@ median6162 <- apply(vst6162,1,median)
 
 library(calibrate)
 
-cairo_pdf("figures/correlations.pdf",width=7,height=7,onefile=T)
+cairo_pdf("figures/correlations.pdf",width=7,height=7,onefile=T,family="Arial")
 par(cex=1)
 plot(100*e[1,],median61[colnames(fc6c)],xlab="Effect Size (%)",ylab="Normalized Median Relative Abundance",pch=19,col=2,main="R1")
 plot(100*e[1,],median61[colnames(fc6c)],xlab="Effect Size (%)",ylab="Normalized Median Relative Abundance",pch=19,col=2,main="R1")
@@ -664,7 +664,7 @@ fccsums <- apply(fc6c,1,function(x) sum(abs(x)))
 fc61sums <- apply(fc61,1,function(x) sum(abs(x)))
 fc62sums <- apply(fc62,1,function(x) sum(abs(x)))
 
-cairo_pdf("figures/correlation2.pdf",width=7,height=7,onefile=T)
+cairo_pdf("figures/correlation2.pdf",width=7,height=7,onefile=T,family="Arial")
 par(cex=1)
 plot(fc61sums,median61,xlab="Total Fold Changes",ylab="Normalized Median Relative Abundance",pch=19,col=2,main="R1")
 plot(fc61sums,median61,xlab="Total Fold Changes",ylab="Normalized Median Relative Abundance",pch=19,col=2,main="R1")
@@ -684,7 +684,7 @@ summary <- summariseResults(cds6c)
 summary$fcMatrix <- summary$fcMatrix[-nrow(summary$fcMatrix),]
 summary$pvMatrix <- summary$pvMatrix[-nrow(summary$pvMatrix),]
 
-cairo_pdf("figures/fancy.pdf",width=14,height=14)
+cairo_pdf("figures/fancy.pdf",width=14,height=14,family="Arial")
 plotBipartiteSummary(summary$fcMatrix,summary$pvMatrix,leftPhylo=as.phylo(hclust(dist(t(summary$fcMatrix)),method="ward.D")),rightPhylo=as.phylo(hclust(dist(summary$fcMatrix),method="ward.D")),leftLabs=leafTaxonomy[colnames(summary$fcMatrix),]$Name,rightLabs=leafTaxonomy[rownames(summary$fcMatrix),]$Name,leftCols=leafTaxonomy[colnames(summary$fcMatrix),]$Color,rightCols=leafTaxonomy[rownames(summary$fcMatrix),]$Color,cutoff=0.01,tip.label.width=0.3)
 plotBipartiteSummary(summary$fcMatrix,summary$pvMatrix,leftLabs=leafTaxonomy[colnames(summary$fcMatrix),]$Name,rightLabs=leafTaxonomy[rownames(summary$fcMatrix),]$Name,leftPhylo=keep.tip(tree,colnames(summary$fcMatrix)),rightPhylo=tree,leftCols=leafTaxonomy[colnames(summary$fcMatrix),]$Color,rightCols=leafTaxonomy[rownames(summary$fcMatrix),]$Color,cutoff=0.01,tip.label.width=0.3)
 dev.off()
