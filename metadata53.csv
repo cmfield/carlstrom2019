@@ -1,0 +1,343 @@
+Sample;Treatment;Spray;Replicate;Time;Name
+1;Ax;U;1;t1;Ax_U_1_t1
+2;Ax;U;2;t1;Ax_U_2_t1
+3;Ax;U;3;t1;Ax_U_3_t1
+4;Ax;U;4;t1;Ax_U_4_t1
+5;Ax;Mg;1;t1;Ax_Mg_1_t1
+6;Ax;Mg;2;t1;Ax_Mg_2_t1
+7;Ax;Mg;3;t1;Ax_Mg_3_t1
+8;Ax;Mg;4;t1;Ax_Mg_4_t1
+9;ALL;U;1;t1;ALL_U_1_t1
+10;ALL;U;2;t1;ALL_U_2_t1
+11;ALL;U;3;t1;ALL_U_3_t1
+12;ALL;U;4;t1;ALL_U_4_t1
+13;ALL;U;5;t1;ALL_U_5_t1
+14;ALL;U;6;t1;ALL_U_6_t1
+15;ALL;Mg;1;t1;ALL_Mg_1_t1
+16;ALL;Mg;2;t1;ALL_Mg_2_t1
+17;ALL;Mg;3;t1;ALL_Mg_3_t1
+18;ALL;Mg;4;t1;ALL_Mg_4_t1
+19;ALL;Mg;5;t1;ALL_Mg_5_t1
+20;ALL;Mg;6;t1;ALL_Mg_6_t1
+21;ALL;Mg;7;t1;ALL_Mg_7_t1
+22;ALL;Mg;8;t1;ALL_Mg_8_t1
+23;ALL;Mg;9;t1;ALL_Mg_9_t1
+24;ALL;Mg;10;t1;ALL_Mg_10_t1
+25;ALL;Mg;11;t1;ALL_Mg_11_t1
+26;ALL;Mg;12;t1;ALL_Mg_12_t1
+27;ALL;Mg;13;t1;ALL_Mg_13_t1
+28;ALL;Mg;14;t1;ALL_Mg_14_t1
+29;ALL;Mg;15;t1;ALL_Mg_15_t1
+30;ALL;Mg;16;t1;ALL_Mg_16_t1
+31;ALL;Mg;17;t1;ALL_Mg_17_t1
+32;ALL;Mg;18;t1;ALL_Mg_18_t1
+33;No A;U;1;t1;No A_U_1_t1
+34;No A;U;2;t1;No A_U_2_t1
+35;No A;U;3;t1;No A_U_3_t1
+36;No A;U;4;t1;No A_U_4_t1
+37;No A;U;5;t1;No A_U_5_t1
+38;No A;U;6;t1;No A_U_6_t1
+39;No A;U;7;t1;No A_U_7_t1
+40;No A;U;8;t1;No A_U_8_t1
+41;No A;Mg;1;t1;No A_Mg_1_t1
+42;No A;Mg;2;t1;No A_Mg_2_t1
+43;No A;Mg;3;t1;No A_Mg_3_t1
+44;No A;Mg;4;t1;No A_Mg_4_t1
+45;No A;Mg;5;t1;No A_Mg_5_t1
+46;No A;Mg;6;t1;No A_Mg_6_t1
+47;No A;Mg;7;t1;No A_Mg_7_t1
+48;No A;Mg;8;t1;No A_Mg_8_t1
+49;No A;A;1;t1;No A_A_1_t1
+50;No A;A;2;t1;No A_A_2_t1
+51;No A;A;3;t1;No A_A_3_t1
+52;No A;A;4;t1;No A_A_4_t1
+53;No A;A;5;t1;No A_A_5_t1
+54;No A;A;6;t1;No A_A_6_t1
+55;No A;A;7;t1;No A_A_7_t1
+56;No A;A;8;t1;No A_A_8_t1
+57;No A;A;9;t1;No A_A_9_t1
+58;No A;A;10;t1;No A_A_10_t1
+59;No A;A;11;t1;No A_A_11_t1
+60;No A;A;12;t1;No A_A_12_t1
+61;No A;A;13;t1;No A_A_13_t1
+62;No A;A;14;t1;No A_A_14_t1
+63;No A;A;15;t1;No A_A_15_t1
+64;No A;A;16;t1;No A_A_16_t1
+65;No B;U;1;t1;No B_U_1_t1
+66;No B;U;2;t1;No B_U_2_t1
+67;No B;U;3;t1;No B_U_3_t1
+68;No B;U;4;t1;No B_U_4_t1
+69;No B;U;5;t1;No B_U_5_t1
+70;No B;U;6;t1;No B_U_6_t1
+71;No B;U;7;t1;No B_U_7_t1
+72;No B;U;8;t1;No B_U_8_t1
+73;No B;Mg;1;t1;No B_Mg_1_t1
+74;No B;Mg;2;t1;No B_Mg_2_t1
+75;No B;Mg;3;t1;No B_Mg_3_t1
+76;No B;Mg;4;t1;No B_Mg_4_t1
+77;No B;Mg;5;t1;No B_Mg_5_t1
+78;No B;Mg;6;t1;No B_Mg_6_t1
+79;No B;Mg;7;t1;No B_Mg_7_t1
+80;No B;Mg;8;t1;No B_Mg_8_t1
+81;No B;B;1;t1;No B_B_1_t1
+82;No B;B;2;t1;No B_B_2_t1
+83;No B;B;3;t1;No B_B_3_t1
+84;No B;B;4;t1;No B_B_4_t1
+85;No B;B;5;t1;No B_B_5_t1
+86;No B;B;6;t1;No B_B_6_t1
+87;No B;B;7;t1;No B_B_7_t1
+88;No B;B;8;t1;No B_B_8_t1
+90;No B;B;10;t1;No B_B_10_t1
+91;No B;B;11;t1;No B_B_11_t1
+92;No B;B;12;t1;No B_B_12_t1
+93;No B;B;13;t1;No B_B_13_t1
+94;No B;B;14;t1;No B_B_14_t1
+95;No B;B;15;t1;No B_B_15_t1
+96;No B;B;16;t1;No B_B_16_t1
+97;No G;U;1;t1;No G_U_1_t1
+98;No G;U;2;t1;No G_U_2_t1
+99;No G;U;3;t1;No G_U_3_t1
+100;No G;U;4;t1;No G_U_4_t1
+101;No G;U;5;t1;No G_U_5_t1
+102;No G;U;6;t1;No G_U_6_t1
+103;No G;U;7;t1;No G_U_7_t1
+104;No G;U;8;t1;No G_U_8_t1
+105;No G;Mg;1;t1;No G_Mg_1_t1
+106;No G;Mg;2;t1;No G_Mg_2_t1
+107;No G;Mg;3;t1;No G_Mg_3_t1
+108;No G;Mg;4;t1;No G_Mg_4_t1
+109;No G;Mg;5;t1;No G_Mg_5_t1
+110;No G;Mg;6;t1;No G_Mg_6_t1
+111;No G;Mg;7;t1;No G_Mg_7_t1
+112;No G;Mg;8;t1;No G_Mg_8_t1
+113;No G;G;1;t1;No G_G_1_t1
+114;No G;G;2;t1;No G_G_2_t1
+115;No G;G;3;t1;No G_G_3_t1
+116;No G;G;4;t1;No G_G_4_t1
+117;No G;G;5;t1;No G_G_5_t1
+118;No G;G;6;t1;No G_G_6_t1
+119;No G;G;7;t1;No G_G_7_t1
+120;No G;G;8;t1;No G_G_8_t1
+121;No G;G;9;t1;No G_G_9_t1
+122;No G;G;10;t1;No G_G_10_t1
+123;No G;G;11;t1;No G_G_11_t1
+124;No G;G;12;t1;No G_G_12_t1
+125;No G;G;13;t1;No G_G_13_t1
+126;No G;G;14;t1;No G_G_14_t1
+127;No G;G;15;t1;No G_G_15_t1
+128;No G;G;16;t1;No G_G_16_t1
+129;No P;U;1;t1;No P_U_1_t1
+130;No P;U;2;t1;No P_U_2_t1
+131;No P;U;3;t1;No P_U_3_t1
+132;No P;U;4;t1;No P_U_4_t1
+133;No P;U;5;t1;No P_U_5_t1
+134;No P;U;6;t1;No P_U_6_t1
+135;No P;U;7;t1;No P_U_7_t1
+136;No P;U;8;t1;No P_U_8_t1
+137;No P;Mg;1;t1;No P_Mg_1_t1
+138;No P;Mg;2;t1;No P_Mg_2_t1
+139;No P;Mg;3;t1;No P_Mg_3_t1
+140;No P;Mg;4;t1;No P_Mg_4_t1
+141;No P;Mg;5;t1;No P_Mg_5_t1
+142;No P;Mg;6;t1;No P_Mg_6_t1
+143;No P;Mg;7;t1;No P_Mg_7_t1
+144;No P;Mg;8;t1;No P_Mg_8_t1
+145;No P;P;1;t1;No P_P_1_t1
+146;No P;P;2;t1;No P_P_2_t1
+147;No P;P;4;t1;No P_P_4_t1
+149;No P;P;5;t1;No P_P_5_t1
+150;No P;P;6;t1;No P_P_6_t1
+151;No P;P;7;t1;No P_P_7_t1
+152;No P;P;8;t1;No P_P_8_t1
+153;No P;P;9;t1;No P_P_9_t1
+154;No P;P;10;t1;No P_P_10_t1
+155;No P;P;11;t1;No P_P_11_t1
+156;No P;P;12;t1;No P_P_12_t1
+157;No P;P;13;t1;No P_P_13_t1
+158;No P;P;14;t1;No P_P_14_t1
+159;No P;P;15;t1;No P_P_15_t1
+160;No P;P;16;t1;No P_P_16_t1
+161;Ax;Mg;1;t2;Ax_Mg_1_t2
+162;Ax;Mg;2;t2;Ax_Mg_2_t2
+163;Ax;Mg;3;t2;Ax_Mg_3_t2
+164;Ax;Mg;4;t2;Ax_Mg_4_t2
+165;Ax;Mg;5;t2;Ax_Mg_5_t2
+166;Ax;Mg;6;t2;Ax_Mg_6_t2
+167;Ax;Mg;7;t2;Ax_Mg_7_t2
+168;Ax;Mg;8;t2;Ax_Mg_8_t2
+169;ALL;Mg;1;t2;ALL_Mg_1_t2
+170;ALL;Mg;2;t2;ALL_Mg_2_t2
+171;ALL;Mg;3;t2;ALL_Mg_3_t2
+172;ALL;Mg;4;t2;ALL_Mg_4_t2
+173;ALL;Mg;5;t2;ALL_Mg_5_t2
+174;ALL;Mg;6;t2;ALL_Mg_6_t2
+175;ALL;Mg;7;t2;ALL_Mg_7_t2
+176;ALL;Mg;8;t2;ALL_Mg_8_t2
+177;ALL;Mg;9;t2;ALL_Mg_9_t2
+178;ALL;Mg;10;t2;ALL_Mg_10_t2
+179;ALL;Mg;11;t2;ALL_Mg_11_t2
+180;ALL;Mg;12;t2;ALL_Mg_12_t2
+181;ALL;Mg;13;t2;ALL_Mg_13_t2
+182;ALL;Mg;14;t2;ALL_Mg_14_t2
+183;ALL;Mg;15;t2;ALL_Mg_15_t2
+184;ALL;Mg;16;t2;ALL_Mg_16_t2
+185;ALL;Mg;17;t2;ALL_Mg_17_t2
+186;ALL;Mg;18;t2;ALL_Mg_18_t2
+187;ALL;Mg;19;t2;ALL_Mg_19_t2
+188;ALL;Mg;20;t2;ALL_Mg_20_t2
+189;ALL;Mg;21;t2;ALL_Mg_21_t2
+190;ALL;Mg;22;t2;ALL_Mg_22_t2
+191;ALL;Mg;23;t2;ALL_Mg_23_t2
+192;ALL;Mg;24;t2;ALL_Mg_24_t2
+193;No A;Mg;1;t2;No A_Mg_1_t2
+194;No A;Mg;2;t2;No A_Mg_2_t2
+195;No A;Mg;3;t2;No A_Mg_3_t2
+196;No A;Mg;4;t2;No A_Mg_4_t2
+197;No A;Mg;5;t2;No A_Mg_5_t2
+198;No A;Mg;6;t2;No A_Mg_6_t2
+199;No A;Mg;7;t2;No A_Mg_7_t2
+200;No A;Mg;8;t2;No A_Mg_8_t2
+201;No A;Mg;9;t2;No A_Mg_9_t2
+202;No A;Mg;10;t2;No A_Mg_10_t2
+203;No A;Mg;11;t2;No A_Mg_11_t2
+204;No A;Mg;12;t2;No A_Mg_12_t2
+205;No A;Mg;13;t2;No A_Mg_13_t2
+206;No A;Mg;14;t2;No A_Mg_14_t2
+207;No A;Mg;15;t2;No A_Mg_15_t2
+208;No A;Mg;16;t2;No A_Mg_16_t2
+209;No A;A;1;t2;No A_A_1_t2
+210;No A;A;2;t2;No A_A_2_t2
+211;No A;A;3;t2;No A_A_3_t2
+212;No A;A;4;t2;No A_A_4_t2
+213;No A;A;5;t2;No A_A_5_t2
+214;No A;A;6;t2;No A_A_6_t2
+215;No A;A;7;t2;No A_A_7_t2
+216;No A;A;8;t2;No A_A_8_t2
+217;No A;A;9;t2;No A_A_9_t2
+218;No A;A;10;t2;No A_A_10_t2
+219;No A;A;11;t2;No A_A_11_t2
+220;No A;A;12;t2;No A_A_12_t2
+221;No A;A;13;t2;No A_A_13_t2
+222;No A;A;14;t2;No A_A_14_t2
+223;No A;A;15;t2;No A_A_15_t2
+224;No A;A;16;t2;No A_A_16_t2
+225;No B;Mg;1;t2;No B_Mg_1_t2
+226;No B;Mg;2;t2;No B_Mg_2_t2
+227;No B;Mg;3;t2;No B_Mg_3_t2
+228;No B;Mg;4;t2;No B_Mg_4_t2
+229;No B;Mg;5;t2;No B_Mg_5_t2
+230;No B;Mg;6;t2;No B_Mg_6_t2
+231;No B;Mg;7;t2;No B_Mg_7_t2
+232;No B;Mg;8;t2;No B_Mg_8_t2
+233;No B;Mg;9;t2;No B_Mg_9_t2
+234;No B;Mg;10;t2;No B_Mg_10_t2
+235;No B;Mg;11;t2;No B_Mg_11_t2
+236;No B;Mg;12;t2;No B_Mg_12_t2
+237;No B;Mg;13;t2;No B_Mg_13_t2
+238;No B;Mg;14;t2;No B_Mg_14_t2
+240;No B;Mg;16;t2;No B_Mg_16_t2
+241;No B;B;1;t2;No B_B_1_t2
+242;No B;B;2;t2;No B_B_2_t2
+243;No B;B;3;t2;No B_B_3_t2
+244;No B;B;4;t2;No B_B_4_t2
+245;No B;B;5;t2;No B_B_5_t2
+246;No B;B;6;t2;No B_B_6_t2
+247;No B;B;7;t2;No B_B_7_t2
+248;No B;B;8;t2;No B_B_8_t2
+249;No B;B;9;t2;No B_B_9_t2
+250;No B;B;10;t2;No B_B_10_t2
+251;No B;B;11;t2;No B_B_11_t2
+252;No B;B;12;t2;No B_B_12_t2
+253;No B;B;13;t2;No B_B_13_t2
+254;No B;B;14;t2;No B_B_14_t2
+255;No B;B;15;t2;No B_B_15_t2
+256;No B;B;16;t2;No B_B_16_t2
+257;No G;Mg;1;t2;No G_Mg_1_t2
+258;No G;Mg;2;t2;No G_Mg_2_t2
+259;No G;Mg;3;t2;No G_Mg_3_t2
+260;No G;Mg;4;t2;No G_Mg_4_t2
+261;No G;Mg;5;t2;No G_Mg_5_t2
+262;No G;Mg;6;t2;No G_Mg_6_t2
+263;No G;Mg;7;t2;No G_Mg_7_t2
+264;No G;Mg;8;t2;No G_Mg_8_t2
+265;No G;Mg;9;t2;No G_Mg_9_t2
+266;No G;Mg;10;t2;No G_Mg_10_t2
+267;No G;Mg;11;t2;No G_Mg_11_t2
+268;No G;Mg;12;t2;No G_Mg_12_t2
+269;No G;Mg;13;t2;No G_Mg_13_t2
+270;No G;Mg;14;t2;No G_Mg_14_t2
+271;No G;Mg;15;t2;No G_Mg_15_t2
+272;No G;Mg;16;t2;No G_Mg_16_t2
+273;No G;G;1;t2;No G_G_1_t2
+275;No G;G;3;t2;No G_G_3_t2
+276;No G;G;4;t2;No G_G_4_t2
+277;No G;G;5;t2;No G_G_5_t2
+278;No G;G;6;t2;No G_G_6_t2
+279;No G;G;7;t2;No G_G_7_t2
+280;No G;G;8;t2;No G_G_8_t2
+281;No G;G;9;t2;No G_G_9_t2
+282;No G;G;10;t2;No G_G_10_t2
+283;No G;G;11;t2;No G_G_11_t2
+284;No G;G;12;t2;No G_G_12_t2
+285;No G;G;13;t2;No G_G_13_t2
+286;No G;G;14;t2;No G_G_14_t2
+287;No G;G;15;t2;No G_G_15_t2
+288;No G;G;16;t2;No G_G_16_t2
+289;No P;Mg;1;t2;No P_Mg_1_t2
+290;No P;Mg;2;t2;No P_Mg_2_t2
+291;No P;Mg;3;t2;No P_Mg_3_t2
+292;No P;Mg;4;t2;No P_Mg_4_t2
+293;No P;Mg;5;t2;No P_Mg_5_t2
+294;No P;Mg;6;t2;No P_Mg_6_t2
+295;No P;Mg;7;t2;No P_Mg_7_t2
+296;No P;Mg;8;t2;No P_Mg_8_t2
+297;No P;Mg;9;t2;No P_Mg_9_t2
+298;No P;Mg;10;t2;No P_Mg_10_t2
+299;No P;Mg;11;t2;No P_Mg_11_t2
+300;No P;Mg;12;t2;No P_Mg_12_t2
+301;No P;Mg;13;t2;No P_Mg_13_t2
+302;No P;Mg;14;t2;No P_Mg_14_t2
+303;No P;Mg;15;t2;No P_Mg_15_t2
+304;No P;Mg;16;t2;No P_Mg_16_t2
+305;No P;P;1;t2;No P_P_1_t2
+306;No P;P;2;t2;No P_P_2_t2
+307;No P;P;3;t2;No P_P_3_t2
+308;No P;P;4;t2;No P_P_4_t2
+309;No P;P;5;t2;No P_P_5_t2
+310;No P;P;6;t2;No P_P_6_t2
+311;No P;P;7;t2;No P_P_7_t2
+313;No P;P;9;t2;No P_P_9_t2
+314;No P;P;10;t2;No P_P_10_t2
+315;No P;P;11;t2;No P_P_11_t2
+316;No P;P;12;t2;No P_P_12_t2
+317;No P;P;13;t2;No P_P_13_t2
+318;No P;P;14;t2;No P_P_14_t2
+319;No P;P;15;t2;No P_P_15_t2
+320;No P;P;16;t2;No P_P_16_t2
+321;ALL;Inoc;1;t0;ALL_Inoc_1_t0
+322;ALL;Inoc;2;t0;ALL_Inoc_2_t0
+323;ALL;Inoc;3;t0;ALL_Inoc_3_t0
+324;No A;Inoc;1;t0;No A_Inoc_1_t0
+325;No A;Inoc;2;t0;No A_Inoc_2_t0
+326;No A;Inoc;3;t0;No A_Inoc_3_t0
+327;No B;Inoc;1;t0;No B_Inoc_1_t0
+328;No B;Inoc;2;t0;No B_Inoc_2_t0
+329;No B;Inoc;3;t0;No B_Inoc_3_t0
+330;No G;Inoc;1;t0;No G_Inoc_1_t0
+331;No G;Inoc;2;t0;No G_Inoc_2_t0
+332;No G;Inoc;3;t0;No G_Inoc_3_t0
+333;No P;Inoc;1;t0;No P_Inoc_1_t0
+334;No P;Inoc;2;t0;No P_Inoc_2_t0
+335;No P;Inoc;3;t0;No P_Inoc_3_t0
+336;A;Inoc;1;t1;A_Inoc_1_t1
+337;A;Inoc;2;t1;A_Inoc_2_t1
+338;A;Inoc;3;t1;A_Inoc_3_t1
+339;B;Inoc;1;t1;B_Inoc_1_t1
+340;B;Inoc;2;t1;B_Inoc_2_t1
+341;B;Inoc;3;t1;B_Inoc_3_t1
+342;G;Inoc;1;t1;G_Inoc_1_t1
+343;G;Inoc;2;t1;G_Inoc_2_t1
+344;G;Inoc;3;t1;G_Inoc_3_t1
+345;P;Inoc;1;t1;P_Inoc_1_t1
+346;P;Inoc;2;t1;P_Inoc_2_t1
+347;P;Inoc;3;t1;P_Inoc_3_t1
