@@ -289,12 +289,12 @@ colnames(e) <- c("Alphaproteobacteria","Betaproteobacteria","Gammaproteobacteria
 
 cairo_pdf("figures/class_dropout_summary.pdf",width=6,height=6,family="Arial")
 par(cex=1,xpd=T)
-corrplot(e,is.corr=F,cl.lim=c(0,0.7),cl.ratio=0.4,p.mat=p,insig="label_sig",sig=c(0.0001,0.001,0.01,0.05),tl.col=1,pch.cex=1,tl.srt=45,xlim=c(-6,5),mar=c(0,7,2,2),col=zcols)
+corrplot(e,is.corr=F,cl.lim=c(0,0.7),cl.ratio=0.4,p.mat=p,insig="label_sig",sig=c(0.0001,0.001,0.01,0.05),tl.col=1,pch.cex=1,tl.srt=45,mar=c(0,10,2,2),col=zcols[6:1])
 
 text(-4,4.1,"Effect on Rest\nof the Community",font=2)
 text(-4,2.1,"Effect on\nInvading Group",font=2)
 text(-4,1.1,"Effect on\nWhole Community",font=2)
-lines(c(-2,-2),c(2.5,5.5))
+lines(c(-2.1,-2.1),c(2.5,5.5))
 
 text(2.5,8.5,"Drop-Out Condition",cex=1,font=2)
 text(6,3,"Effect Size",cex=1,srt=-90)
@@ -353,14 +353,14 @@ subtree <- keep.tip(tree,shortNames)
 cairo_pdf("figures/single_dropout_summary.pdf",width=14,height=7,family="Arial")
 par(cex=1,xpd=T)
 rownames(e) <- rep("",3)
-corrplot(e,is.corr=F,cl.lim=c(0,0.25),cl.ratio=0.1,tl.col=c(leafTaxonomy[shortNames,]$Color,"black"),p.mat=p,insig="label_sig",sig=c(0.0001,0.001,0.01,0.05),pch.cex=1,mar=c(0,8,0,2),col=zcols)
+corrplot(e,is.corr=F,cl.lim=c(0,0.25),cl.ratio=0.1,tl.col=c(leafTaxonomy[shortNames,]$Color,"black"),p.mat=p,insig="label_sig",sig=c(0.0001,0.001,0.01,0.05),pch.cex=1,mar=c(0,8,0,2),col=zcols[6:1])
 draw.phylo(1,8.5,25,11,subtree,direction="d")
 text(0.25,1,"Combined",pos=2)
 text(0.25,2,"Replicate 2",pos=2)
 text(0.25,3,"Replicate 1",pos=2)
-text(12.5,12,"Drop-Out Condition",cex=1.5)
+text(12.5,11.5,"Drop-Out Condition",cex=1.5)
 text(28,2,"Effect Size",cex=1,srt=-90)
-legend(0,4.5,legend=names(phylumColors[-4]),fill=phylumColors[-4],xjust=1,yjust=0,cex=0.8)
+legend(0.5,3.6,legend=names(phylumColors[-4]),fill=phylumColors[-4],xjust=1,yjust=0,cex=0.8)
 dev.off()
 
 # Summary plot 2 for expt6 combined
@@ -448,13 +448,13 @@ control62 <- control62[rownames(control62)!="Unclassified",]
 
 cairo_pdf("figures/class_dropout_control_community.pdf",width=20,height=10,family="Arial")
 par(cex=1)
-comm53 <- plotCommunity(control53,type="bar",xlabels=leafTaxonomy[rownames(control53),]$Name,xcols=leafTaxonomy[rownames(control53),]$Color)
+comm53 <- plotCommunity(control53,type="violinswarm",xlabels=leafTaxonomy[rownames(control53),]$Name,xcols=leafTaxonomy[rownames(control53),]$Color)
 dev.off()
 
 cairo_pdf("figures/single_dropout_control_community.pdf",width=20,height=10,family="Arial")
 par(cex=1)
-comm61 <- plotCommunity(control61,type="bar",xlabels=leafTaxonomy[rownames(control61),]$Name,xcols=leafTaxonomy[rownames(control61),]$Color)
-comm62 <- plotCommunity(control62,type="bar",xlabels=leafTaxonomy[rownames(control62),]$Name,xcols=leafTaxonomy[rownames(control61),]$Color)
+comm61 <- plotCommunity(control61,type="violinswarm",xlabels=leafTaxonomy[rownames(control61),]$Name,xcols=leafTaxonomy[rownames(control61),]$Color)
+comm62 <- plotCommunity(control62,type="violinswarm",xlabels=leafTaxonomy[rownames(control62),]$Name,xcols=leafTaxonomy[rownames(control61),]$Color)
 dev.off()
 
 # PCA of controls
@@ -498,6 +498,8 @@ names(cds6c) <- substr(names(cds6c),1,nchar(names(cds6c))-1)
 names(cds6c) <- sub("no","Leaf",names(cds6c))
 
 summary6 <- summariseResults(cds6c)
+summary6$fcMatrix <- summary6$fcMatrix[strains,]
+summary6$pcMatrix <- summary6$pvMatrix[strains,]
 net6 <- igraphFromSummary(summary6$fcMatrix,summary6$pvMatrix,cutoff=0.01)
 vertex_attr(net6,"shortName") <- sub("-.*","",vertex_attr(net6,"name"))
 vertex_attr(net6,"twoLineName") <- sub("-","\n",vertex_attr(net6,"name"))
@@ -637,13 +639,20 @@ plot(mediani,median53,xlab="Inoculum Normalized Median Relative Abundance",ylab=
 textxy(mediani,median53,sub("eaf","",names(median53)))
 
 y = igraph::degree(net6)[colnames(e)]
+yo = igraph::degree(net6,mode="out")[colnames(e)]
+yi = igraph::degree(net6,mode="in")[colnames(e)]
 x = 100*e[3,]
 
-plot(100*e[3,],igraph::degree(net6)[colnames(e)],xlab="Effect Size (%)",ylab="Node Degree",pch=19,col=2,main="Combined")
-abline(lm(y~x))
-plot(100*e[3,],igraph::degree(net6)[colnames(e)],xlab="Effect Size (%)",ylab="Node Degree",pch=19,col=2,main="Combined")
-textxy(100*e[3,-22],igraph::degree(net6)[colnames(e)[-22]],sub("eaf","",rownames(leafTaxonomy)[match(colnames(e),leafTaxonomy$Name)]))
-abline(lm(y~x))
+#plot(100*e[3,],igraph::degree(net6)[colnames(e)],xlab="Effect Size (%)",ylab="Node Degree",pch=19,col=2,main="Combined",sub=summary(lm(y~x))$r.squared)
+#abline(lm(y~x))
+#plot(100*e[3,],igraph::degree(net6)[colnames(e)],xlab="Effect Size (%)",ylab="Node Degree",pch=19,col=2,main="Combined")
+#textxy(100*e[3,],igraph::degree(net6)[colnames(e)],sub("eaf","",rownames(leafTaxonomy)[match(colnames(e),leafTaxonomy$Name)]))
+#abline(lm(y~x))
+plot(x,yo,xlab="Effect Size (%)",ylab="Node Out Degree",pch=19,col=2,main="Combined",sub=summary(lm(yo~x))$r.squared)
+textxy(x,yo,sub("eaf","",rownames(leafTaxonomy)[match(colnames(e),leafTaxonomy$Name)]))
+abline(lm(yo~x))
+#plot(100*e[3,],yi,xlab="Effect Size (%)",ylab="Node In Degree",pch=19,col=2,main="Combined",sub=summary(lm(yi~x))$r.squared)
+#abline(lm(yi~x))
 dev.off()
 
 # Output some data to file
